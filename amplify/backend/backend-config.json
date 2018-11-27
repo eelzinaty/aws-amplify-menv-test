@@ -5,5 +5,10 @@
 			"providerPlugin": "awscloudformation"
 		}
 	},
-	"analytics": {}
+	"analytics": {
+		"menvtest": {
+			"service": "Pinpoint",
+			"providerPlugin": "awscloudformation"
+		}
+	}
 }
