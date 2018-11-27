@@ -21,6 +21,11 @@
             "UnauthRoleName": "menv-test-20181127154829-unauthRole",
             "StackName": "menv-test-20181127154829",
             "StackId": "arn:aws:cloudformation:us-east-1:050124817506:stack/menv-test-20181127154829/cbce57b0-f285-11e8-ab34-503f23fb55fe"
+        },
+        "categories": {
+            "auth": {
+                "menvCognito": {}
+            }
         }
     }
 }

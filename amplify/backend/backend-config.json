@@ -1,1 +1,9 @@
-{}
+{
+	"auth": {
+		"menvCognito": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"analytics": {}
+}
