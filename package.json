@@ -2,7 +2,9 @@
   "name": "amplify-menv-test",
   "version": "1.0.0",
   "description": "AWS Amplify JavaScript Example",
-  "dependencies": {},
+  "dependencies": {
+    "aws-amplify": "^1.1.10"
+  },
   "devDependencies": {
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
