@@ -29,7 +29,7 @@ const CognitoConfirmUserInput = document.getElementById('CognitoConfirmUserInput
 CognitoCreateUserButton.addEventListener('click', (evt) => {
     Auth.signUp({
         username: 'issam',
-        password: 'issam@1',
+        password: 'Issam@1985',
         attributes: {
             email: "issam+1@hatchapps.com", // optional
         },
