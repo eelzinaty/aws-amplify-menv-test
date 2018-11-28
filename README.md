@@ -7,12 +7,12 @@
   - [Console](https://console.aws.amazon.com/amplify)
 
 ## Steps to create team workflows
-- Setup branches: Master (Prod), Test, Dev
+- Setup branches: **Master (Prod)**, **Test**, **Integration**, and **Dev**
 - For each branch run ``` amplify init ``` and setup up the development environment for it (Profile and Name).
 - Then each developer need to pull the project and init his local development environment.
 - Any changes made should be first tested agianst Dev environment. Developer should make a PR on the dev branch.
-- After testing Dev environment, we can merge changinmg with Test and Prod environments.
-- AWS Amplify Console will be connected with our github repo so it can trigger new deployment whenever new changes got pushed to the repo.
+- After testing Dev environment, we can merge changing with Integration, then Test and Prod environments.
+- AWS Amplify Console will be connected with our github repo so it can trigger new deployment whenever new changes got pushed to the repo. The branches that are connected to Amplify console are: **Master (Prod)**, **Test**, **Integration**
 - NEXT: Try to seperate backend and frontend projects and have different deplyment strategy for each.
 
 ## Change Cognito User Pool settings to allow user signup/login by email
