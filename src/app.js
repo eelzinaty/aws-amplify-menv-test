@@ -31,7 +31,7 @@ CognitoCreateUserButton.addEventListener('click', (evt) => {
         username: 'issam',
         password: 'issam@1',
         attributes: {
-            email: "issam+1@hatchapps.com",          // optional
+            email: "issam+1@hatchapps.com", // optional
         },
         validationData: []  //optional
         })
