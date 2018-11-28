@@ -20,3 +20,38 @@ AnalyticsEventButton.addEventListener('click', (evt) => {
             AnalyticsResult.innerHTML += '<a href="'+url+'" target="_blank">View Events on the Amazon Pinpoint Console</a>';
         });
 });
+
+const CognitoResult = document.getElementById('CognitoResult');
+const CognitoCreateUserButton = document.getElementById('CognitoCreateUserButton');
+const CognitoConfirmUserButton = document.getElementById('CognitoConfirmUserButton');
+const CognitoConfirmUserInput = document.getElementById('CognitoConfirmUserInput');
+
+CognitoCreateUserButton.addEventListener('click', (evt) => {
+    Auth.signUp({
+        username: 'issam',
+        password: 'issam@1',
+        attributes: {
+            email: "issam+1@hatchapps.com",          // optional
+        },
+        validationData: []  //optional
+        })
+        .then(data => {
+            console.log(data);
+            CognitoResult.innerHTML = JSON.stringify(data);
+        })
+        .catch(err => console.log(err));
+});
+
+CognitoConfirmUserButton.addEventListener('click', (evt) => {
+    const code = CognitoConfirmUserInput.value;
+    // After retrieveing the confirmation code from the user
+    Auth.confirmSignUp('issam', code, {
+        // Optional. Force user confirmation irrespective of existing alias. By default set to True.
+        forceAliasCreation: true    
+    })
+    .then(data => {
+        console.log(data);
+        CognitoResult.innerHTML = JSON.stringify(data);
+    })
+    .catch(err => console.log(err));
+});

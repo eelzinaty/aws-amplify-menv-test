@@ -81,7 +81,7 @@
 		"authmenvCognito": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/menv-test-20181127152423-deployment/amplify-cfn-templates/auth/menvCognito-cloudformation-template.yml",
+				"TemplateURL": "https://s3.amazonaws.com/menv-test-20181127154829-deployment/amplify-cfn-templates/auth/menvCognito-cloudformation-template.yml",
 				"Parameters": {
 					"identityPoolName": "menv_idenity_pool",
 					"allowUnauthenticatedIdentities": true,
@@ -139,14 +139,14 @@
 							"Arn"
 						]
 					},
-					"env": "master"
+					"env": "dev"
 				}
 			}
 		},
 		"analyticsmenvtest": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/menv-test-20181127152423-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+				"TemplateURL": "https://s3.amazonaws.com/menv-test-20181127154829-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
 				"Parameters": {
 					"appName": "menvtest",
 					"roleName": "pinpointLambdaRoleae7bbb26",
@@ -166,7 +166,27 @@
 							"Arn"
 						]
 					},
-					"env": "master"
+					"env": "dev"
+				}
+			}
+		},
+		"apimenvTest": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/menv-test-20181127154829-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"Parameters": {
+					"AppSyncApiName": "menvTest",
+					"AuthCognitoUserPoolId": {
+						"Fn::GetAtt": [
+							"authmenvCognito",
+							"Outputs.UserPoolId"
+						]
+					},
+					"schemaGraphql": "s3://menv-test-20181127154829-deployment/amplify-appsync-files/schema.graphql.1543437689993",
+					"ResolverBucket": "menv-test-20181127154829-deployment",
+					"ResolverRootKey": "amplify-appsync-files",
+					"DeploymentTimestamp": "1543437689993",
+					"env": "dev"
 				}
 			}
 		}

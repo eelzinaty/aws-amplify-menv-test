@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "menvTest",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authmenvCognito",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "schemaGraphql": "s3://menv-test-20181127154829-deployment/amplify-appsync-files/schema.graphql.1543437689993",
+    "ResolverBucket": "menv-test-20181127154829-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1543437689993"
+}
