@@ -1,7 +1,7 @@
 # Guidelines
 
 ## Use AWS Amplify for multiple environments and team workflows
-- [Official documents] (https://aws-amplify.github.io/docs/cli/multienv?sdk=js)
+- [Official documents](https://aws-amplify.github.io/docs/cli/multienv?sdk=js)
 - Use Amplify Console for managing deployemnt:
   - [Docs](https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html)
   - [Console](https://console.aws.amazon.com/amplify)
