@@ -189,7 +189,9 @@ Resources:
           RequireNumbers: false
           RequireSymbols: false
           RequireUppercase: false
-      UsernameAttributes: [email]
+      #UsernameAttributes: [email]
+      AliasAttributes:
+        - email
       MfaConfiguration: !Ref mfaConfiguration
       SmsVerificationMessage: !Ref smsVerificationMessage
       SmsConfiguration: 
